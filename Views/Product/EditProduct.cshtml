@@ -1,0 +1,36 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model ProductViewModel
+<div class="m-5 card p-3">
+    <form asp-controller="Product" asp-action="EditProductAction" >
+        <div class="form-group">
+            <label asp-for="ProductId">Product Id</label>
+            <input type="number" class="form-control" id="ProductId" asp-for="ProductId" aria-describedby="ProductId" value="@Model.ProductId" disabled>
+        </div>
+        <div class="form-group">
+            <label asp-for="Name">Product Name</label>
+            <input type="text" class="form-control" asp-for="Name" id="ProductName" value="@Model.Name">
+        </div>
+        <div class="form-group">
+            <label asp-for="ProductPrice">Product Price</label>
+            <input type="text" class="form-control" asp-for="ProductPrice" id="ProductPrice" value="@Model.ProductPrice">
+        </div>
+        <div class="form-group">
+            <label asp-for="img">Image URL</label>
+            <input type="text" asp-for="img" class="form-control" id="ImageURL" value="@Model.img">
+        </div>
+        
+        <!--<input asp-for="Model.UserPassword" />
+        <h1><span asp-validation-for="Model.UserPassword"></span></h1>--->
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+
+    </form>
+
+    <!---<a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Register">Click here to register</a>-->
+
+
+</div>
